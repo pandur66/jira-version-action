@@ -44,6 +44,3 @@ tsconfig.tsbuildinfo
 # Release artifacts
 *.tgz
 *.zip
-
-# Ignore lockfile for bundled GitHub Actions
-package-lock.json
