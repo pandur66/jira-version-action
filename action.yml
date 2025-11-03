@@ -1,0 +1,38 @@
+name: 'Jira Version Action'
+description: 'A GitHub Action that integrates with the Jira REST API to create project versions programmatically.'
+author: 'Bruno Ferreira'
+branding:
+  icon: 'tag'
+  color: 'blue'
+
+inputs:
+  jira-base-url:
+    description: 'Base URL of your Jira instance (e.g. https://yourcompany.atlassian.net)'
+    required: true
+  jira-project-key:
+    description: 'Jira project key (e.g. MYPROJ)'
+    required: true
+  jira-user-email:
+    description: 'Email of the Jira user'
+    required: true
+  jira-api-token:
+    description: 'API token for the Jira user'
+    required: true
+  version-name:
+    description: 'Version name to create in Jira'
+    required: true
+  version-description:
+    description: 'Optional description for the Jira version'
+    required: false
+  released:
+    description: 'Whether the version is released (true/false)'
+    required: false
+    default: 'false'
+  check-if-exists:
+    description: 'If true, check if the version already exists before creating it'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

@@ -1,0 +1,28 @@
+{
+  "name": "jira-version-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action that integrates with the Jira REST API to create project versions programmatically.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "bundle": "ncc build dist/index.js -o dist",
+    "lint": "eslint --ext .ts .",
+    "format": "prettier --write .",
+    "prepare": "npm run build && npm run bundle"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@actions/http-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+  "@vercel/ncc": "^0.38.1",
+  "@types/node": "^20.0.0",
+    "eslint": "^8.50.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "prettier": "^3.0.0",
+    "eslint-config-prettier": "^9.0.0"
+  }
+}
